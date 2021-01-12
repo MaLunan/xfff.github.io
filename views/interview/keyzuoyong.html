@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端面试题-写 React/Vue 项目时为什么要在列表组件中写 key,其作用是什么？ | 写代码不如去遛狗-个人博客|IT技术博客</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/icon.jpg">
+    <link rel="stylesheet" href="/iconfont/iconfont.css">
+    <script language="javascript" type="text/javascript" src="/iconfont/iconfont.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/MaLunan/live2d-widget@latest/autoload.js"></script>
+    <meta name="description" content="写代码不如去遛狗，个人博客网站，学习前端、后端知识，分享面试经验，分享工作中的问题和写一些技术分享，是一个互联网从业者值得收藏的网站。">
+    <meta name="keywords" content="个人博客,技术博客,前端博客,个人网站,个人博客模板,个人原创网站">
+    <meta name="baidu-site-verification" content="bdukCluk30">
+    <meta name="sogou_site_verification" content="gReIJbnqBO">
+    <meta name="author" content="MaNong">
+    
+    <link rel="preload" href="/assets/css/0.styles.3d01dffa.css" as="style"><link rel="preload" href="/assets/js/app.2ffb0f86.js" as="script"><link rel="preload" href="/assets/js/4.d5417698.js" as="script"><link rel="preload" href="/assets/js/38.533f09bc.js" as="script"><link rel="prefetch" href="/assets/js/1.babe6953.js"><link rel="prefetch" href="/assets/js/10.d45129ed.js"><link rel="prefetch" href="/assets/js/11.101b9efa.js"><link rel="prefetch" href="/assets/js/12.20528a5c.js"><link rel="prefetch" href="/assets/js/13.e95e37ef.js"><link rel="prefetch" href="/assets/js/14.f38b59c3.js"><link rel="prefetch" href="/assets/js/15.8503dddf.js"><link rel="prefetch" href="/assets/js/16.3d1645ca.js"><link rel="prefetch" href="/assets/js/17.d65f9743.js"><link rel="prefetch" href="/assets/js/18.1d708f4f.js"><link rel="prefetch" href="/assets/js/19.9701b029.js"><link rel="prefetch" href="/assets/js/2.2d8b8981.js"><link rel="prefetch" href="/assets/js/20.5d430aef.js"><link rel="prefetch" href="/assets/js/21.89fec142.js"><link rel="prefetch" href="/assets/js/22.d76e81bd.js"><link rel="prefetch" href="/assets/js/23.c9540e6c.js"><link rel="prefetch" href="/assets/js/24.1e906836.js"><link rel="prefetch" href="/assets/js/25.37b8b2b2.js"><link rel="prefetch" href="/assets/js/26.3bd11744.js"><link rel="prefetch" href="/assets/js/27.9175309f.js"><link rel="prefetch" href="/assets/js/28.e5e0eeb6.js"><link rel="prefetch" href="/assets/js/29.fa31fb1d.js"><link rel="prefetch" href="/assets/js/30.e7012e01.js"><link rel="prefetch" href="/assets/js/31.4f70d44b.js"><link rel="prefetch" href="/assets/js/32.f7ba21fc.js"><link rel="prefetch" href="/assets/js/33.ec11b94a.js"><link rel="prefetch" href="/assets/js/34.471a5db1.js"><link rel="prefetch" href="/assets/js/35.2873b89b.js"><link rel="prefetch" href="/assets/js/36.0e5b6dab.js"><link rel="prefetch" href="/assets/js/37.10eb6ed5.js"><link rel="prefetch" href="/assets/js/39.51d25d98.js"><link rel="prefetch" href="/assets/js/40.dfc7d8e7.js"><link rel="prefetch" href="/assets/js/41.285d7e0c.js"><link rel="prefetch" href="/assets/js/42.ec7b8bd1.js"><link rel="prefetch" href="/assets/js/5.e31a43a8.js"><link rel="prefetch" href="/assets/js/6.f89b6cf0.js"><link rel="prefetch" href="/assets/js/7.3df083c7.js"><link rel="prefetch" href="/assets/js/8.5def96b3.js"><link rel="prefetch" href="/assets/js/9.9e114e8d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3d01dffa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/icon.jpg" alt="写代码不如去遛狗-个人博客|IT技术博客" class="logo"> <span class="site-name can-hide">写代码不如去遛狗-个人博客|IT技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="知识笔记" class="dropdown-title"><span class="title">知识笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="知识笔记" class="mobile-dropdown-title"><span class="title">知识笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/views/basis/git.html" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/views/advanced/jiaoshoujia-02.html" class="nav-link">
+  高级进阶
+</a></li><li class="dropdown-item"><!----> <a href="/views/Bug/bug.html" class="nav-link">
+  Bug
+</a></li><li class="dropdown-item"><!----> <a href="/views/interview/interview-01.html" class="nav-link">
+  面试宝典
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="组件库" class="dropdown-title"><span class="title">组件库</span> <span class="arrow down"></span></button> <button type="button" aria-label="组件库" class="mobile-dropdown-title"><span class="title">组件库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/coms/basicsCom/pagination.html" class="nav-link">
+  基础组件
+</a></li><li class="dropdown-item"><!----> <a href="/coms/professionCom/msg.html" class="nav-link">
+  业务组件
+</a></li></ul></div></div><div class="nav-item"><a href="/jottings/20200904.html" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="知识笔记" class="dropdown-title"><span class="title">知识笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="知识笔记" class="mobile-dropdown-title"><span class="title">知识笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/views/basis/git.html" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/views/advanced/jiaoshoujia-02.html" class="nav-link">
+  高级进阶
+</a></li><li class="dropdown-item"><!----> <a href="/views/Bug/bug.html" class="nav-link">
+  Bug
+</a></li><li class="dropdown-item"><!----> <a href="/views/interview/interview-01.html" class="nav-link">
+  面试宝典
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="组件库" class="dropdown-title"><span class="title">组件库</span> <span class="arrow down"></span></button> <button type="button" aria-label="组件库" class="mobile-dropdown-title"><span class="title">组件库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/coms/basicsCom/pagination.html" class="nav-link">
+  基础组件
+</a></li><li class="dropdown-item"><!----> <a href="/coms/professionCom/msg.html" class="nav-link">
+  业务组件
+</a></li></ul></div></div><div class="nav-item"><a href="/jottings/20200904.html" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础知识</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>高级进阶</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Bug</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>面试宝典</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/interview/20201211.html" class="sidebar-link">前端面试题-['1','2','3'].map(parseInt)返回值</a></li><li><a href="/views/interview/fangdoujieliu.html" class="sidebar-link">前端面试题-防抖与节流</a></li><li><a href="/views/interview/interview-01.html" class="sidebar-link">前端面试题-高频问题</a></li><li><a href="/views/interview/jsbasis.html" class="sidebar-link">前端面试题-JS基础</a></li><li><a href="/views/interview/jstoo.html" class="sidebar-link">前端面试题-JS基础2</a></li><li><a href="/views/interview/keyzuoyong.html" aria-current="page" class="active sidebar-link">前端面试题-写 React/Vue 项目时为什么要在列表组件中写 key,其作用是什么？</a></li><li><a href="/views/interview/mapset.html" class="sidebar-link">前端面试题-Set、Map、WeakSet 和 WeakMap 的区别</a></li><li><a href="/views/interview/react.html" class="sidebar-link">前端面试题-react</a></li><li><a href="/views/interview/status.html" class="sidebar-link">前端面试题-经典题库</a></li><li><a href="/views/interview/vue.html" class="sidebar-link">前端面试题-vue</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="前端面试题-写react-vue-项目时为什么要在列表组件中写-key-其作用是什么"><a href="#前端面试题-写react-vue-项目时为什么要在列表组件中写-key-其作用是什么" class="header-anchor">#</a> 前端面试题-写React/Vue 项目时为什么要在列表组件中写 key,其作用是什么？</h1> <!----> <p>vue和react都是采用diff算法来对比新旧虚拟节点，从而更新节点。在vue的diff函数中（建议先了解一下diff算法过程）。
+在交叉对比中，当新节点跟旧节点头尾交叉对比没有结果时，会根据新节点的key去对比旧节点数组中的key，从而找到相应旧节点（这里对应的是一个key =&gt; index 的map映射）。如果没找到就认为是一个新增节点。而如果没有key，那么就会采用遍历查找的方式去找到对应的旧节点。一种一个map映射，另一种是遍历查找。相比而言。map映射的速度更快。</p> <p>key是给每一个vnode的唯一id,可以依靠key,更准确, 更快的拿到oldVnode中对应的vnode节点。</p> <ol><li><p>更准确
+因为带key就不是就地复用了，在sameNode函数 a.key === b.key对比中可以避免就地复用的情况。所以会更加准确。</p></li> <li><p>更快
+利用key的唯一性生成map对象来获取对应节点，比遍历方式更快。</p></li></ol> <ul><li>列</li></ul> <p>v-for的内容会生成以下的dom节点数组，我们给每一个节点标记一个身份id：</p> <div class="language-js extra-class"><pre class="language-js"><code>
+ <span class="token punctuation">[</span>
+    <span class="token string">'&lt;div&gt;1&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id： A</span>
+    <span class="token string">'&lt;div&gt;2&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  B</span>
+    <span class="token string">'&lt;div&gt;3&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  C</span>
+    <span class="token string">'&lt;div&gt;4&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  D</span>
+    <span class="token string">'&lt;div&gt;5&lt;/div&gt;'</span>  <span class="token comment">// id:  E</span>
+  <span class="token punctuation">]</span>
+
+</code></pre></div><ul><li>改变dataList数据，进行数据位置替换，对比改变后的数据</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>
+ vm<span class="token punctuation">.</span>dataList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span> <span class="token comment">// 数据位置替换</span>
+
+ <span class="token comment">// 没有key的情况， 节点位置不变，但是节点innerText内容更新了</span>
+  <span class="token punctuation">[</span>
+    <span class="token string">'&lt;div&gt;4&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id： A</span>
+    <span class="token string">'&lt;div&gt;1&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  B</span>
+    <span class="token string">'&lt;div&gt;3&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  C</span>
+    <span class="token string">'&lt;div&gt;5&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  D</span>
+    <span class="token string">'&lt;div&gt;2&lt;/div&gt;'</span>  <span class="token comment">// id:  E</span>
+  <span class="token punctuation">]</span>
+
+  <span class="token comment">// 有key的情况，dom节点位置进行了交换，但是内容没有更新</span>
+  <span class="token comment">// &lt;div v-for=&quot;i in dataList&quot; :key='i'&gt;{{ i }}&lt;/div&gt;</span>
+  <span class="token punctuation">[</span>
+    <span class="token string">'&lt;div&gt;4&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id： D</span>
+    <span class="token string">'&lt;div&gt;1&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  A</span>
+    <span class="token string">'&lt;div&gt;3&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  C</span>
+    <span class="token string">'&lt;div&gt;5&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  E</span>
+    <span class="token string">'&lt;div&gt;2&lt;/div&gt;'</span>  <span class="token comment">// id:  B</span>
+  <span class="token punctuation">]</span>
+
+</code></pre></div><ul><li>增删dataList列表项</li></ul> <div class="language-js extra-class"><pre class="language-js"><code> vm<span class="token punctuation">.</span>dataList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span> <span class="token comment">// 数据进行增删</span>
+
+  <span class="token comment">// 1. 没有key的情况， 节点位置不变，内容也更新了</span>
+  <span class="token punctuation">[</span>
+    <span class="token string">'&lt;div&gt;3&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id： A</span>
+    <span class="token string">'&lt;div&gt;4&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  B</span>
+    <span class="token string">'&lt;div&gt;5&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  C</span>
+    <span class="token string">'&lt;div&gt;6&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  D</span>
+    <span class="token string">'&lt;div&gt;7&lt;/div&gt;'</span>  <span class="token comment">// id:  E</span>
+  <span class="token punctuation">]</span>
+
+  <span class="token comment">// 2. 有key的情况， 节点删除了 A, B 节点，新增了 F, G 节点</span>
+  <span class="token comment">// &lt;div v-for=&quot;i in dataList&quot; :key='i'&gt;{{ i }}&lt;/div&gt;</span>
+  <span class="token punctuation">[</span>
+    <span class="token string">'&lt;div&gt;3&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id： C</span>
+    <span class="token string">'&lt;div&gt;4&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  D</span>
+    <span class="token string">'&lt;div&gt;5&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  E</span>
+    <span class="token string">'&lt;div&gt;6&lt;/div&gt;'</span><span class="token punctuation">,</span> <span class="token comment">// id:  F</span>
+    <span class="token string">'&lt;div&gt;7&lt;/div&gt;'</span>  <span class="token comment">// id:  G</span>
+  <span class="token punctuation">]</span>
+
+</code></pre></div><!----></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/MaLunan/press/edit/dev-mln/docs/views/interview/keyzuoyong.md" target="_blank" rel="noopener noreferrer">在GitHub 上编辑此页！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">12/18/2020, 4:11:15 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/views/interview/jstoo.html" class="prev">
+        前端面试题-JS基础2
+      </a></span> <span class="next"><a href="/views/interview/mapset.html">
+        前端面试题-Set、Map、WeakSet 和 WeakMap 的区别
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2ffb0f86.js" defer></script><script src="/assets/js/4.d5417698.js" defer></script><script src="/assets/js/38.533f09bc.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端面试题-[&#39;1&#39;,&#39;2&#39;,&#39;3&#39;].map(parseInt)返回值 | 写代码不如去遛狗-个人博客|IT技术博客</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/icon.jpg">
+    <link rel="stylesheet" href="/iconfont/iconfont.css">
+    <script language="javascript" type="text/javascript" src="/iconfont/iconfont.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/MaLunan/live2d-widget@latest/autoload.js"></script>
+    <meta name="description" content="写代码不如去遛狗，个人博客网站，学习前端、后端知识，分享面试经验，分享工作中的问题和写一些技术分享，是一个互联网从业者值得收藏的网站。">
+    <meta name="keywords" content="个人博客,技术博客,前端博客,个人网站,个人博客模板,个人原创网站">
+    <meta name="baidu-site-verification" content="bdukCluk30">
+    <meta name="sogou_site_verification" content="gReIJbnqBO">
+    <meta name="author" content="MaNong">
+    
+    <link rel="preload" href="/assets/css/0.styles.3d01dffa.css" as="style"><link rel="preload" href="/assets/js/app.2ffb0f86.js" as="script"><link rel="preload" href="/assets/js/4.d5417698.js" as="script"><link rel="preload" href="/assets/js/33.ec11b94a.js" as="script"><link rel="prefetch" href="/assets/js/1.babe6953.js"><link rel="prefetch" href="/assets/js/10.d45129ed.js"><link rel="prefetch" href="/assets/js/11.101b9efa.js"><link rel="prefetch" href="/assets/js/12.20528a5c.js"><link rel="prefetch" href="/assets/js/13.e95e37ef.js"><link rel="prefetch" href="/assets/js/14.f38b59c3.js"><link rel="prefetch" href="/assets/js/15.8503dddf.js"><link rel="prefetch" href="/assets/js/16.3d1645ca.js"><link rel="prefetch" href="/assets/js/17.d65f9743.js"><link rel="prefetch" href="/assets/js/18.1d708f4f.js"><link rel="prefetch" href="/assets/js/19.9701b029.js"><link rel="prefetch" href="/assets/js/2.2d8b8981.js"><link rel="prefetch" href="/assets/js/20.5d430aef.js"><link rel="prefetch" href="/assets/js/21.89fec142.js"><link rel="prefetch" href="/assets/js/22.d76e81bd.js"><link rel="prefetch" href="/assets/js/23.c9540e6c.js"><link rel="prefetch" href="/assets/js/24.1e906836.js"><link rel="prefetch" href="/assets/js/25.37b8b2b2.js"><link rel="prefetch" href="/assets/js/26.3bd11744.js"><link rel="prefetch" href="/assets/js/27.9175309f.js"><link rel="prefetch" href="/assets/js/28.e5e0eeb6.js"><link rel="prefetch" href="/assets/js/29.fa31fb1d.js"><link rel="prefetch" href="/assets/js/30.e7012e01.js"><link rel="prefetch" href="/assets/js/31.4f70d44b.js"><link rel="prefetch" href="/assets/js/32.f7ba21fc.js"><link rel="prefetch" href="/assets/js/34.471a5db1.js"><link rel="prefetch" href="/assets/js/35.2873b89b.js"><link rel="prefetch" href="/assets/js/36.0e5b6dab.js"><link rel="prefetch" href="/assets/js/37.10eb6ed5.js"><link rel="prefetch" href="/assets/js/38.533f09bc.js"><link rel="prefetch" href="/assets/js/39.51d25d98.js"><link rel="prefetch" href="/assets/js/40.dfc7d8e7.js"><link rel="prefetch" href="/assets/js/41.285d7e0c.js"><link rel="prefetch" href="/assets/js/42.ec7b8bd1.js"><link rel="prefetch" href="/assets/js/5.e31a43a8.js"><link rel="prefetch" href="/assets/js/6.f89b6cf0.js"><link rel="prefetch" href="/assets/js/7.3df083c7.js"><link rel="prefetch" href="/assets/js/8.5def96b3.js"><link rel="prefetch" href="/assets/js/9.9e114e8d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.3d01dffa.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/icon.jpg" alt="写代码不如去遛狗-个人博客|IT技术博客" class="logo"> <span class="site-name can-hide">写代码不如去遛狗-个人博客|IT技术博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="知识笔记" class="dropdown-title"><span class="title">知识笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="知识笔记" class="mobile-dropdown-title"><span class="title">知识笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/views/basis/git.html" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/views/advanced/jiaoshoujia-02.html" class="nav-link">
+  高级进阶
+</a></li><li class="dropdown-item"><!----> <a href="/views/Bug/bug.html" class="nav-link">
+  Bug
+</a></li><li class="dropdown-item"><!----> <a href="/views/interview/interview-01.html" class="nav-link">
+  面试宝典
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="组件库" class="dropdown-title"><span class="title">组件库</span> <span class="arrow down"></span></button> <button type="button" aria-label="组件库" class="mobile-dropdown-title"><span class="title">组件库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/coms/basicsCom/pagination.html" class="nav-link">
+  基础组件
+</a></li><li class="dropdown-item"><!----> <a href="/coms/professionCom/msg.html" class="nav-link">
+  业务组件
+</a></li></ul></div></div><div class="nav-item"><a href="/jottings/20200904.html" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="知识笔记" class="dropdown-title"><span class="title">知识笔记</span> <span class="arrow down"></span></button> <button type="button" aria-label="知识笔记" class="mobile-dropdown-title"><span class="title">知识笔记</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/views/basis/git.html" class="nav-link">
+  基础知识
+</a></li><li class="dropdown-item"><!----> <a href="/views/advanced/jiaoshoujia-02.html" class="nav-link">
+  高级进阶
+</a></li><li class="dropdown-item"><!----> <a href="/views/Bug/bug.html" class="nav-link">
+  Bug
+</a></li><li class="dropdown-item"><!----> <a href="/views/interview/interview-01.html" class="nav-link">
+  面试宝典
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="组件库" class="dropdown-title"><span class="title">组件库</span> <span class="arrow down"></span></button> <button type="button" aria-label="组件库" class="mobile-dropdown-title"><span class="title">组件库</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/coms/basicsCom/pagination.html" class="nav-link">
+  基础组件
+</a></li><li class="dropdown-item"><!----> <a href="/coms/professionCom/msg.html" class="nav-link">
+  业务组件
+</a></li></ul></div></div><div class="nav-item"><a href="/jottings/20200904.html" class="nav-link">
+  随笔
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  关于我
+</a></div> <a href="https://github.com/MaLunan/press" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>基础知识</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>高级进阶</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Bug</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>面试宝典</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/interview/20201211.html" aria-current="page" class="active sidebar-link">前端面试题-['1','2','3'].map(parseInt)返回值</a></li><li><a href="/views/interview/fangdoujieliu.html" class="sidebar-link">前端面试题-防抖与节流</a></li><li><a href="/views/interview/interview-01.html" class="sidebar-link">前端面试题-高频问题</a></li><li><a href="/views/interview/jsbasis.html" class="sidebar-link">前端面试题-JS基础</a></li><li><a href="/views/interview/jstoo.html" class="sidebar-link">前端面试题-JS基础2</a></li><li><a href="/views/interview/keyzuoyong.html" class="sidebar-link">前端面试题-写 React/Vue 项目时为什么要在列表组件中写 key,其作用是什么？</a></li><li><a href="/views/interview/mapset.html" class="sidebar-link">前端面试题-Set、Map、WeakSet 和 WeakMap 的区别</a></li><li><a href="/views/interview/react.html" class="sidebar-link">前端面试题-react</a></li><li><a href="/views/interview/status.html" class="sidebar-link">前端面试题-经典题库</a></li><li><a href="/views/interview/vue.html" class="sidebar-link">前端面试题-vue</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="前端面试题-1-2-3-map-parseint-返回值"><a href="#前端面试题-1-2-3-map-parseint-返回值" class="header-anchor">#</a> 前端面试题-['1','2','3'].map(parseInt)返回值</h1> <!----> <ul><li>['1','2','3'].map(parseInt)的返回值是什么？</li></ul> <p>答案：[1,NaN,NaN]</p> <ul><li>parseInt方法</li></ul> <p>定义和用法</p> <p>parseInt() 函数可解析一个字符串，并返回一个整数。</p> <p>parseInt(string, radix)</p> <p>string:要被解析的字符串</p> <p>radix:
+可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础（进制数）来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则
+parseInt() 将返回 NaN。</p> <ul><li>例：</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">//10 radinx为0时按十进制处理</span>
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">//NaN 最小是二进制</span>
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment">//2 10以二进制为基数，结果2</span>
+
+</code></pre></div><ul><li><p>map方法</p></li> <li><p>map方法的使用</p></li></ul> <p>map方法返回一个新数组，数组中的元素为原始数组元素处理后的值</p> <p>array.map(function(currentValue,index,arr), thisValue)</p> <p>数组的参数有三个，第一个参数代表当前被处理的元素，第二个参数代表该元素的索引，第三个参数代表当前元素属于的数组对象</p> <ul><li>解题</li></ul> <p>知道了以上两个方法，那我们看一下解析过程</p> <p>['1','2','3'].map(parseInt) 就是将字符串  '1','2','3'作为元素，0,1,2下标，分别调用 parseInt函数</p> <p>也就是</p> <div class="language-js extra-class"><pre class="language-js"><code>
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'1'</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token comment">//基数为0 会根据十进制解析，所以结果为1</span>
+
+<span class="token function">parseInt</span><span class="token punctuation">(</span><span class="token string">'2,'</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment">//基数为 1 不在区间范围，所以结果为NaN</span>
+
+<span class="token function">ParseInt</span><span class="token punctuation">(</span><span class="token string">'3,'</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment">//基数为2 用二进制来解析，二进制以应该为0，1组成,&lt;2才可以，无法解析，所以结果为NaN</span>
+
+</code></pre></div><!----></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/MaLunan/press/edit/dev-mln/docs/views/interview/20201211.md" target="_blank" rel="noopener noreferrer">在GitHub 上编辑此页！</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新时间:</span> <span class="time">12/18/2020, 4:11:15 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/views/Bug/bug.html" class="prev">
+        Bug-bug退散
+      </a></span> <span class="next"><a href="/views/interview/fangdoujieliu.html">
+        前端面试题-防抖与节流
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2ffb0f86.js" defer></script><script src="/assets/js/4.d5417698.js" defer></script><script src="/assets/js/33.ec11b94a.js" defer></script>
+  </body>
+</html>
